@@ -20,6 +20,7 @@ Apresentar projetos reais, formação e processo de trabalho com clareza, em por
 - Usa Codex e vibecoding no desenvolvimento. Sua participação confirmada nos quatro projetos está discriminada em `docs/project-content.md`; atribuições de arquitetura técnica do código permanecem sem confirmação.
 - Projetos fornecidos: PeladaPro, Expansão Giraffas (site para Gessé Lira, consultor comercial), Exclusiva Modas e FE Prime (nome público do projeto no repositório `juniormodelo`).
 - URLs de publicação, repositórios, GitHub pessoal e LinkedIn foram fornecidas pelo proprietário. Os quatro sites publicados responderam HTTP 200 e tiveram a abertura capturada nesta sessão. O conteúdo dos repositórios ainda não foi auditado.
+- Gabriel autorizou o endereço de contato público pelo WhatsApp: `https://wa.me/5581992796870`.
 
 ## Constraints
 Sem PGM Academy, métricas ou depoimentos inventados. Não apresentar relação contratual direta com a rede Giraffas. Mostrar download de currículo apenas após inclusão do arquivo. Não criar formulário sem destino.

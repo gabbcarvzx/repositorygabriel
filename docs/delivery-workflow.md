@@ -2,7 +2,7 @@
 
 ## Estado em 10/11/2026
 
-Este workspace começou sem Git, remoto, workflows ou vínculo local com Vercel. Um repositório Git **local** foi inicializado, com baseline `06d07fefc547870858e0511ce7902c21d7c4a888` e branch `feat/project-stories-delivery`. Nenhum push, PR, preview ou deploy foi feito. `gh` e `vercel` não estavam instalados; não foi confirmada autenticação ou plano das contas. Nenhum token foi lido ou registrado.
+Este workspace começou sem Git, remoto, workflows ou vínculo local com Vercel. Um repositório Git **local** foi inicializado, com baseline `06d07fefc547870858e0511ce7902c21d7c4a888` e branch `feat/project-stories-delivery`. Nenhum push, PR, preview ou deploy foi feito. `gh` e `vercel` não estavam instalados; não foi confirmada autenticação ou plano das contas. Nenhum token foi lido ou registrado. Gabriel indicou `https://github.com/gabbcarvzx/repositorygabriel.git` como destino futuro na etapa de motion; o remoto ainda não foi configurado e essa indicação não autoriza push, merge ou deploy.
 
 ## Caminho preparado
 
@@ -18,7 +18,7 @@ Este workspace começou sem Git, remoto, workflows ou vínculo local com Vercel.
 
 ## Ativação que depende de Gabriel
 
-- Indicar e autorizar **repositório GitHub de destino**, visibilidade e push da branch. Nenhum foi inferido do GitHub pessoal.
+- Confirmar visibilidade e autorizar o **push da branch** para o repositório indicado por Gabriel. A URL foi fornecida, mas nenhuma publicação externa foi autorizada na etapa de motion.
 - Indicar ou criar, com autorização separada, o **projeto Vercel de destino** e vinculá-lo ao mesmo repositório para previews. Confirmar a branch de produção `main` e que `git.deploymentEnabled.main=false` será aplicado. O preview será publicamente acessível conforme as configurações da conta.
 - Configurar no GitHub o ambiente `production` com **required reviewer** de Gabriel, restringir a `main` e impedir bypass quando disponível. Se o próprio Gabriel iniciar o workflow e a opção de impedir self-review estiver ativa, será necessária outra pessoa revisora; ajustar o desenho ao controle desejado. Verificar disponibilidade no plano: em GitHub Free/Pro/Team, required reviewers para environments estão disponíveis somente em repositórios públicos. Se o destino privado/plano não suportar o gate, não ativar `PRODUCTION_GATE_READY`; alternativa: fazer deploy manual por Gabriel após aprovação explícita do SHA e checks, sem afirmar que há gate automático.
 - Configurar `VERCEL_TOKEN`, `VERCEL_ORG_ID` e `VERCEL_PROJECT_ID` como secrets **somente** do ambiente protegido `production`. Não colocar em variáveis do job de checks. Testar a integração com um release autorizado antes de chamar o fluxo operacional.
