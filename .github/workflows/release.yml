@@ -1,0 +1,93 @@
+name: Release approved commit
+on:
+  workflow_dispatch:
+    inputs:
+      approved_sha:
+        description: Exact reviewed commit SHA
+        required: true
+        type: string
+permissions:
+  contents: read
+concurrency:
+  group: production
+  cancel-in-progress: false
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Verify activation and approved tree
+        env:
+          APPROVED_SHA: ${{ inputs.approved_sha }}
+          GATE_READY: ${{ vars.PRODUCTION_GATE_READY }}
+        run: |
+          test "$GATE_READY" = "true" || { echo "Production gate is not configured"; exit 1; }
+          test "$GITHUB_REF" = "refs/heads/main" || { echo "Run from main"; exit 1; }
+          [[ "$APPROVED_SHA" =~ ^[0-9a-f]{40}$ ]] || { echo "A full SHA is required"; exit 1; }
+          git merge-base --is-ancestor "$APPROVED_SHA" HEAD || { echo "Approved commit is not an ancestor"; exit 1; }
+          test "$(git rev-parse "$APPROVED_SHA^{tree}")" = "$(git rev-parse HEAD^{tree})" || { echo "Main differs from approved tree"; exit 1; }
+  preflight:
+    needs: validate
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: npm ci
+      - run: npm run typecheck
+      - run: npm run lint
+      - run: npm run build
+        env:
+          VITE_BUILD_SHA: ${{ inputs.approved_sha }}
+      - run: python -m pip install -r requirements-delivery.txt
+      - run: python -m playwright install --with-deps chromium
+      - run: npm run preview -- --port 4173 &
+      - run: python scripts/verify_delivery.py --base-url http://127.0.0.1:4173 --sha ${{ inputs.approved_sha }} --expect-version
+  production:
+    needs: preflight
+    runs-on: ubuntu-latest
+    environment: production
+    outputs:
+      url: ${{ steps.deploy.outputs.url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - name: Build and deploy on Vercel
+        id: deploy
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+          VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+          VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+          VITE_BUILD_SHA: ${{ inputs.approved_sha }}
+        run: |
+          test -n "$VERCEL_TOKEN" && test -n "$VERCEL_ORG_ID" && test -n "$VERCEL_PROJECT_ID"
+          npm install --global vercel@65.11.0
+          vercel pull --yes --environment=production --token="$VERCEL_TOKEN"
+          vercel build --prod --token="$VERCEL_TOKEN"
+          vercel deploy --prebuilt --prod --token="$VERCEL_TOKEN" > deployment-url.txt
+          echo "url=$(cat deployment-url.txt)" >> "$GITHUB_OUTPUT"
+  postdeploy:
+    needs: production
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -r requirements-delivery.txt
+      - run: python -m playwright install --with-deps chromium
+      - name: Verify production URL and version
+        env:
+          EXPECTED_SHA: ${{ inputs.approved_sha }}
+          DEPLOYMENT_URL: ${{ needs.production.outputs.url }}
+        run: python scripts/verify_production.py "$DEPLOYMENT_URL" "$EXPECTED_SHA"
