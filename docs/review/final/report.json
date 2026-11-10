@@ -1,0 +1,920 @@
+{
+  "pt-360": {
+    "title": "Gabriel Carvalho — Projetos web",
+    "lang": "pt-BR",
+    "scrollWidth": 360,
+    "viewport": 360,
+    "hero": {
+      "x": 16,
+      "y": 306,
+      "width": 324,
+      "height": 137,
+      "right": 340
+    },
+    "heroLead": {
+      "x": 20,
+      "y": 126,
+      "width": 260,
+      "height": 71,
+      "right": 280
+    },
+    "heroAction": {
+      "x": 20,
+      "y": 571,
+      "width": 195,
+      "height": 58,
+      "right": 215
+    },
+    "contact": {
+      "x": 20,
+      "y": 5450,
+      "width": 320,
+      "height": 107,
+      "right": 340
+    },
+    "images": [
+      {
+        "src": "/projects/pelada.jpg",
+        "currentSrc": "http://127.0.0.1:5173/projects/pelada-mobile.jpg",
+        "loaded": true,
+        "natural": [
+          390,
+          620
+        ],
+        "box": [
+          320,
+          457
+        ],
+        "fit": "contain"
+      },
+      {
+        "src": "/projects/giraffas.jpg",
+        "currentSrc": "http://127.0.0.1:5173/projects/giraffas-mobile.jpg",
+        "loaded": true,
+        "natural": [
+          390,
+          620
+        ],
+        "box": [
+          320,
+          457
+        ],
+        "fit": "contain"
+      },
+      {
+        "src": "/projects/exclusiva.jpg",
+        "currentSrc": "http://127.0.0.1:5173/projects/exclusiva-mobile.jpg",
+        "loaded": true,
+        "natural": [
+          390,
+          620
+        ],
+        "box": [
+          320,
+          457
+        ],
+        "fit": "contain"
+      },
+      {
+        "src": "/projects/prime.jpg",
+        "currentSrc": "http://127.0.0.1:5173/projects/prime-mobile.jpg",
+        "loaded": true,
+        "natural": [
+          390,
+          620
+        ],
+        "box": [
+          320,
+          457
+        ],
+        "fit": "cover"
+      }
+    ],
+    "visibleOverflow": [
+      {
+        "selector": "field__halo",
+        "right": 396,
+        "overflow": "visible",
+        "parent": "field "
+      },
+      {
+        "selector": "field__lines",
+        "right": 630,
+        "overflow": "visible",
+        "parent": "field "
+      }
+    ],
+    "pageErrors": [],
+    "mobileMenuVisible": true
+  },
+  "pt-768": {
+    "title": "Gabriel Carvalho — Projetos web",
+    "lang": "pt-BR",
+    "scrollWidth": 768,
+    "viewport": 768,
+    "hero": {
+      "x": 22,
+      "y": 339,
+      "width": 719,
+      "height": 233,
+      "right": 740
+    },
+    "heroLead": {
+      "x": 28,
+      "y": 164,
+      "width": 260,
+      "height": 71,
+      "right": 288
+    },
+    "heroAction": {
+      "x": 536,
+      "y": 619,
+      "width": 205,
+      "height": 64,
+      "right": 740
+    },
+    "contact": {
+      "x": 28,
+      "y": 4995,
+      "width": 713,
+      "height": 83,
+      "right": 740
+    },
+    "images": [
+      {
+        "src": "/projects/pelada.jpg",
+        "currentSrc": "http://127.0.0.1:5173/projects/pelada.jpg",
+        "loaded": true,
+        "natural": [
+          1440,
+          900
+        ],
+        "box": [
+          713,
+          348
+        ],
+        "fit": "cover"
+      },
+      {
+        "src": "/projects/giraffas.jpg",
+        "currentSrc": "http://127.0.0.1:5173/projects/giraffas.jpg",
+        "loaded": true,
+        "natural": [
+          1440,
+          900
+        ],
+        "box": [
+          713,
+          445
+        ],
+        "fit": "cover"
+      },
+      {
+        "src": "/projects/exclusiva.jpg",
+        "currentSrc": "http://127.0.0.1:5173/projects/exclusiva.jpg",
+        "loaded": true,
+        "natural": [
+          1440,
+          900
+        ],
+        "box": [
+          713,
+          445
+        ],
+        "fit": "cover"
+      },
+      {
+        "src": "/projects/prime.jpg",
+        "currentSrc": "http://127.0.0.1:5173/projects/prime.jpg",
+        "loaded": true,
+        "natural": [
+          1440,
+          900
+        ],
+        "box": [
+          713,
+          445
+        ],
+        "fit": "cover"
+      }
+    ],
+    "visibleOverflow": [
+      {
+        "selector": "field__halo",
+        "right": 845,
+        "overflow": "visible",
+        "parent": "field "
+      }
+    ],
+    "pageErrors": []
+  },
+  "pt-1440": {
+    "title": "Gabriel Carvalho — Projetos web",
+    "lang": "pt-BR",
+    "scrollWidth": 1440,
+    "viewport": 1440,
+    "hero": {
+      "x": 68,
+      "y": 286,
+      "width": 1292,
+      "height": 438,
+      "right": 1360
+    },
+    "heroLead": {
+      "x": 80,
+      "y": 215,
+      "width": 260,
+      "height": 71,
+      "right": 340
+    },
+    "heroAction": {
+      "x": 1155,
+      "y": 824,
+      "width": 205,
+      "height": 64,
+      "right": 1360
+    },
+    "contact": {
+      "x": 80,
+      "y": 5452,
+      "width": 1280,
+      "height": 155,
+      "right": 1360
+    },
+    "images": [
+      {
+        "src": "/projects/pelada.jpg",
+        "currentSrc": "http://127.0.0.1:5173/projects/pelada.jpg",
+        "loaded": true,
+        "natural": [
+          1440,
+          900
+        ],
+        "box": [
+          1280,
+          624
+        ],
+        "fit": "cover"
+      },
+      {
+        "src": "/projects/giraffas.jpg",
+        "currentSrc": "http://127.0.0.1:5173/projects/giraffas.jpg",
+        "loaded": true,
+        "natural": [
+          1440,
+          900
+        ],
+        "box": [
+          755,
+          472
+        ],
+        "fit": "cover"
+      },
+      {
+        "src": "/projects/exclusiva.jpg",
+        "currentSrc": "http://127.0.0.1:5173/projects/exclusiva.jpg",
+        "loaded": true,
+        "natural": [
+          1440,
+          900
+        ],
+        "box": [
+          661,
+          551
+        ],
+        "fit": "cover"
+      },
+      {
+        "src": "/projects/prime.jpg",
+        "currentSrc": "http://127.0.0.1:5173/projects/prime.jpg",
+        "loaded": true,
+        "natural": [
+          1440,
+          900
+        ],
+        "box": [
+          755,
+          431
+        ],
+        "fit": "cover"
+      }
+    ],
+    "visibleOverflow": [
+      {
+        "selector": "field__halo",
+        "right": 1584,
+        "overflow": "visible",
+        "parent": "field "
+      },
+      {
+        "selector": "field__lines",
+        "right": 8732,
+        "overflow": "visible",
+        "parent": "field "
+      }
+    ],
+    "pageErrors": []
+  },
+  "en-360": {
+    "title": "Gabriel Carvalho — Web projects",
+    "lang": "en",
+    "scrollWidth": 360,
+    "viewport": 360,
+    "hero": {
+      "x": 16,
+      "y": 279,
+      "width": 324,
+      "height": 137,
+      "right": 340
+    },
+    "heroLead": {
+      "x": 20,
+      "y": 126,
+      "width": 260,
+      "height": 47,
+      "right": 280
+    },
+    "heroAction": {
+      "x": 20,
+      "y": 571,
+      "width": 188,
+      "height": 58,
+      "right": 208
+    },
+    "contact": {
+      "x": 20,
+      "y": 5355,
+      "width": 320,
+      "height": 53,
+      "right": 340
+    },
+    "images": [
+      {
+        "src": "/projects/pelada.jpg",
+        "currentSrc": "http://127.0.0.1:5173/projects/pelada-mobile.jpg",
+        "loaded": true,
+        "natural": [
+          390,
+          620
+        ],
+        "box": [
+          320,
+          457
+        ],
+        "fit": "contain"
+      },
+      {
+        "src": "/projects/giraffas.jpg",
+        "currentSrc": "http://127.0.0.1:5173/projects/giraffas-mobile.jpg",
+        "loaded": true,
+        "natural": [
+          390,
+          620
+        ],
+        "box": [
+          320,
+          457
+        ],
+        "fit": "contain"
+      },
+      {
+        "src": "/projects/exclusiva.jpg",
+        "currentSrc": "http://127.0.0.1:5173/projects/exclusiva-mobile.jpg",
+        "loaded": true,
+        "natural": [
+          390,
+          620
+        ],
+        "box": [
+          320,
+          457
+        ],
+        "fit": "contain"
+      },
+      {
+        "src": "/projects/prime.jpg",
+        "currentSrc": "http://127.0.0.1:5173/projects/prime-mobile.jpg",
+        "loaded": true,
+        "natural": [
+          390,
+          620
+        ],
+        "box": [
+          320,
+          457
+        ],
+        "fit": "cover"
+      }
+    ],
+    "visibleOverflow": [
+      {
+        "selector": "field__halo",
+        "right": 396,
+        "overflow": "visible",
+        "parent": "field "
+      },
+      {
+        "selector": "field__lines",
+        "right": 630,
+        "overflow": "visible",
+        "parent": "field "
+      }
+    ],
+    "pageErrors": [],
+    "mobileMenuVisible": true
+  },
+  "en-768": {
+    "title": "Gabriel Carvalho — Web projects",
+    "lang": "en",
+    "scrollWidth": 768,
+    "viewport": 768,
+    "hero": {
+      "x": 22,
+      "y": 339,
+      "width": 719,
+      "height": 233,
+      "right": 740
+    },
+    "heroLead": {
+      "x": 28,
+      "y": 164,
+      "width": 260,
+      "height": 47,
+      "right": 288
+    },
+    "heroAction": {
+      "x": 542,
+      "y": 619,
+      "width": 198,
+      "height": 64,
+      "right": 740
+    },
+    "contact": {
+      "x": 28,
+      "y": 5067,
+      "width": 713,
+      "height": 83,
+      "right": 740
+    },
+    "images": [
+      {
+        "src": "/projects/pelada.jpg",
+        "currentSrc": "http://127.0.0.1:5173/projects/pelada.jpg",
+        "loaded": true,
+        "natural": [
+          1440,
+          900
+        ],
+        "box": [
+          713,
+          348
+        ],
+        "fit": "cover"
+      },
+      {
+        "src": "/projects/giraffas.jpg",
+        "currentSrc": "http://127.0.0.1:5173/projects/giraffas.jpg",
+        "loaded": true,
+        "natural": [
+          1440,
+          900
+        ],
+        "box": [
+          713,
+          445
+        ],
+        "fit": "cover"
+      },
+      {
+        "src": "/projects/exclusiva.jpg",
+        "currentSrc": "http://127.0.0.1:5173/projects/exclusiva.jpg",
+        "loaded": true,
+        "natural": [
+          1440,
+          900
+        ],
+        "box": [
+          713,
+          445
+        ],
+        "fit": "cover"
+      },
+      {
+        "src": "/projects/prime.jpg",
+        "currentSrc": "http://127.0.0.1:5173/projects/prime.jpg",
+        "loaded": true,
+        "natural": [
+          1440,
+          900
+        ],
+        "box": [
+          713,
+          445
+        ],
+        "fit": "cover"
+      }
+    ],
+    "visibleOverflow": [
+      {
+        "selector": "field__halo",
+        "right": 845,
+        "overflow": "visible",
+        "parent": "field "
+      }
+    ],
+    "pageErrors": []
+  },
+  "en-1440": {
+    "title": "Gabriel Carvalho — Web projects",
+    "lang": "en",
+    "scrollWidth": 1440,
+    "viewport": 1440,
+    "hero": {
+      "x": 68,
+      "y": 262,
+      "width": 1292,
+      "height": 438,
+      "right": 1360
+    },
+    "heroLead": {
+      "x": 80,
+      "y": 215,
+      "width": 260,
+      "height": 47,
+      "right": 340
+    },
+    "heroAction": {
+      "x": 1162,
+      "y": 800,
+      "width": 198,
+      "height": 64,
+      "right": 1360
+    },
+    "contact": {
+      "x": 80,
+      "y": 5390,
+      "width": 1280,
+      "height": 155,
+      "right": 1360
+    },
+    "images": [
+      {
+        "src": "/projects/pelada.jpg",
+        "currentSrc": "http://127.0.0.1:5173/projects/pelada.jpg",
+        "loaded": true,
+        "natural": [
+          1440,
+          900
+        ],
+        "box": [
+          1280,
+          624
+        ],
+        "fit": "cover"
+      },
+      {
+        "src": "/projects/giraffas.jpg",
+        "currentSrc": "http://127.0.0.1:5173/projects/giraffas.jpg",
+        "loaded": true,
+        "natural": [
+          1440,
+          900
+        ],
+        "box": [
+          755,
+          472
+        ],
+        "fit": "cover"
+      },
+      {
+        "src": "/projects/exclusiva.jpg",
+        "currentSrc": "http://127.0.0.1:5173/projects/exclusiva.jpg",
+        "loaded": true,
+        "natural": [
+          1440,
+          900
+        ],
+        "box": [
+          661,
+          551
+        ],
+        "fit": "cover"
+      },
+      {
+        "src": "/projects/prime.jpg",
+        "currentSrc": "http://127.0.0.1:5173/projects/prime.jpg",
+        "loaded": true,
+        "natural": [
+          1440,
+          900
+        ],
+        "box": [
+          755,
+          431
+        ],
+        "fit": "cover"
+      }
+    ],
+    "visibleOverflow": [
+      {
+        "selector": "field__halo",
+        "right": 1584,
+        "overflow": "visible",
+        "parent": "field "
+      },
+      {
+        "selector": "field__lines",
+        "right": 8732,
+        "overflow": "visible",
+        "parent": "field "
+      }
+    ],
+    "pageErrors": []
+  },
+  "motion": {
+    "start": {
+      "scrollY": 0,
+      "hidden": false,
+      "fieldClass": "field ",
+      "shift": "0px",
+      "opacity": "0.62",
+      "halo": "matrix(1.00452, 0, 0, 1.00452, 2.31787, 3.55813)",
+      "haloPlay": "running",
+      "haloDuration": "9s",
+      "lines": "matrix3d(0.914445, -0.177413, -0.36375, 0.000519644, 0.404709, 0.400866, 0.821898, -0.00117414, 0, -0.898794, 0.438371, -0.000626244, 1.51222, 0.407706, 0.835922, 0.998806)",
+      "linesPlay": "running",
+      "linesDuration": "16s",
+      "heroTop": 285.875
+    },
+    "idleAfter1100ms": {
+      "scrollY": 0,
+      "hidden": false,
+      "fieldClass": "field ",
+      "shift": "0px",
+      "opacity": "0.62",
+      "halo": "matrix(1.01474, 0, 0, 1.01474, 7.56145, 11.6075)",
+      "haloPlay": "running",
+      "haloDuration": "9s",
+      "lines": "matrix3d(0.916464, -0.175399, -0.359622, 0.000513746, 0.400116, 0.401752, 0.823713, -0.00117673, 0, -0.898794, 0.438371, -0.000626244, 4.91794, 1.34087, 2.74919, 0.996073)",
+      "linesPlay": "running",
+      "linesDuration": "16s",
+      "heroTop": 285.875
+    },
+    "scroll650": {
+      "scrollY": 650,
+      "hidden": false,
+      "fieldClass": "field ",
+      "shift": "-32px",
+      "opacity": "0.4538888888888889",
+      "halo": "matrix(1.01622, 0, 0, 1.01622, 8.32209, -19.2249)",
+      "haloPlay": "running",
+      "haloDuration": "9s",
+      "lines": "matrix3d(0.916755, -0.175107, -0.359022, 0.000512889, 0.399449, 0.401879, 0.823974, -0.00117711, 0, -0.898794, 0.438371, -0.000626244, -7.37216, -11.3826, -23.3379, 1.03334)",
+      "linesPlay": "running",
+      "linesDuration": "16s",
+      "heroTop": -364.125
+    },
+    "simulatedHidden": {
+      "scrollY": 650,
+      "hidden": true,
+      "fieldClass": "field is-still",
+      "shift": "-32px",
+      "opacity": "0.4538888888888889",
+      "halo": "matrix(1.01667, 0, 0, 1.01667, 8.5498, -18.8753)",
+      "haloPlay": "paused",
+      "haloDuration": "9s",
+      "lines": "matrix3d(0.916842, -0.175019, -0.358843, 0.000512633, 0.399249, 0.401917, 0.824052, -0.00117722, 0, -0.898794, 0.438371, -0.000626244, -7.21849, -11.3429, -23.2564, 1.03322)",
+      "linesPlay": "paused",
+      "linesDuration": "16s",
+      "heroTop": -364.125
+    },
+    "simulatedReturn": {
+      "scrollY": 650,
+      "hidden": false,
+      "fieldClass": "field",
+      "shift": "-32px",
+      "opacity": "0.4538888888888889",
+      "halo": "matrix(1.01682, 0, 0, 1.01682, 8.62611, -18.7582)",
+      "haloPlay": "running",
+      "haloDuration": "9s",
+      "lines": "matrix3d(0.916872, -0.17499, -0.358783, 0.000512547, 0.399182, 0.40193, 0.824079, -0.00117726, 0, -0.898794, 0.438371, -0.000626244, -7.167, -11.3296, -23.2291, 1.03318)",
+      "linesPlay": "running",
+      "linesDuration": "16s",
+      "heroTop": -364.125
+    },
+    "paused": {
+      "scrollY": 650,
+      "hidden": false,
+      "fieldClass": "field is-still",
+      "shift": "-32px",
+      "opacity": "0.4538888888888889",
+      "halo": "matrix(1.01719, 0, 0, 1.01719, 8.81626, -18.4663)",
+      "haloPlay": "paused",
+      "haloDuration": "9s",
+      "lines": "matrix3d(0.916944, -0.174917, -0.358633, 0.000512333, 0.399016, 0.401962, 0.824144, -0.00117735, 0, -0.898794, 0.438371, -0.000626244, -7.03872, -11.2964, -23.161, 1.03309)",
+      "linesPlay": "paused",
+      "linesDuration": "16s",
+      "heroTop": -364.125
+    },
+    "pausedAfter1100ms": {
+      "scrollY": 650,
+      "hidden": false,
+      "fieldClass": "field is-still",
+      "shift": "-32px",
+      "opacity": "0.4538888888888889",
+      "halo": "matrix(1.01719, 0, 0, 1.01719, 8.81626, -18.4663)",
+      "haloPlay": "paused",
+      "haloDuration": "9s",
+      "lines": "matrix3d(0.916944, -0.174917, -0.358633, 0.000512333, 0.399016, 0.401962, 0.824144, -0.00117735, 0, -0.898794, 0.438371, -0.000626244, -7.03872, -11.2964, -23.161, 1.03309)",
+      "linesPlay": "paused",
+      "linesDuration": "16s",
+      "heroTop": -364.125
+    },
+    "pausedAfterReturn": {
+      "scrollY": 650,
+      "hidden": false,
+      "fieldClass": "field is-still",
+      "shift": "-32px",
+      "opacity": "0.4538888888888889",
+      "halo": "matrix(1.01719, 0, 0, 1.01719, 8.81626, -18.4663)",
+      "haloPlay": "paused",
+      "haloDuration": "9s",
+      "lines": "matrix3d(0.916944, -0.174917, -0.358633, 0.000512333, 0.399016, 0.401962, 0.824144, -0.00117735, 0, -0.898794, 0.438371, -0.000626244, -7.03872, -11.2964, -23.161, 1.03309)",
+      "linesPlay": "paused",
+      "linesDuration": "16s",
+      "heroTop": -364.125
+    },
+    "reduced": {
+      "scrollY": 650,
+      "hidden": false,
+      "fieldClass": "field ",
+      "shift": "-32px",
+      "opacity": "0.4538888888888889",
+      "halo": "matrix(1, 0, 0, 1, 0, -32)",
+      "haloPlay": "running",
+      "haloDuration": "0s",
+      "lines": "matrix3d(0.913545, -0.178302, -0.365572, 0.000522246, 0.406737, 0.400472, 0.821089, -0.00117298, 0, -0.898794, 0.438371, -0.000626244, -13.0156, -12.8151, -26.2749, 1.03754)",
+      "linesPlay": "running",
+      "linesDuration": "0s",
+      "heroTop": -364.125
+    },
+    "reducedAfter500ms": {
+      "scrollY": 650,
+      "hidden": false,
+      "fieldClass": "field ",
+      "shift": "-32px",
+      "opacity": "0.4538888888888889",
+      "halo": "matrix(1, 0, 0, 1, 0, -32)",
+      "haloPlay": "running",
+      "haloDuration": "0s",
+      "lines": "matrix3d(0.913545, -0.178302, -0.365572, 0.000522246, 0.406737, 0.400472, 0.821089, -0.00117298, 0, -0.898794, 0.438371, -0.000626244, -13.0156, -12.8151, -26.2749, 1.03754)",
+      "linesPlay": "running",
+      "linesDuration": "0s",
+      "heroTop": -364.125
+    },
+    "fieldOutOfView": {
+      "scrollY": 2400,
+      "hidden": false,
+      "fieldClass": "field is-still",
+      "shift": "-90px",
+      "opacity": "0.16",
+      "halo": "matrix(1.00015, 0, 0, 1.00015, 0.0763435, -89.8828)",
+      "haloPlay": "paused",
+      "haloDuration": "9s",
+      "lines": "matrix3d(0.913575, -0.178272, -0.365512, 0.000522161, 0.40667, 0.400485, 0.821116, -0.00117302, 0, -0.898794, 0.438371, -0.000626244, -36.5504, -36.0303, -73.873, 1.10553)",
+      "linesPlay": "paused",
+      "linesDuration": "16s",
+      "heroTop": -2114.125
+    },
+    "wheelSteps": [
+      {
+        "scrollY": 160,
+        "hidden": false,
+        "fieldClass": "field",
+        "shift": "-8px",
+        "opacity": "0.5791111111111111",
+        "halo": "matrix(1.00207, 0, 0, 1.00207, 1.06418, -6.3664)",
+        "haloPlay": "running",
+        "haloDuration": "9s",
+        "lines": "matrix3d(0.913959, -0.177894, -0.364736, 0.000521052, 0.405806, 0.400653, 0.821461, -0.00117352, 0, -0.898794, 0.438371, -0.000626244, -2.55165, -3.01841, -6.18865, 1.00884)",
+        "linesPlay": "running",
+        "linesDuration": "16s",
+        "heroTop": 125.875
+      },
+      {
+        "scrollY": 320,
+        "hidden": false,
+        "fieldClass": "field",
+        "shift": "-16px",
+        "opacity": "0.5382222222222222",
+        "halo": "matrix(1.00319, 0, 0, 1.00319, 1.63463, -13.4907)",
+        "haloPlay": "running",
+        "haloDuration": "9s",
+        "lines": "matrix3d(0.914181, -0.177675, -0.364288, 0.000520411, 0.405307, 0.40075, 0.82166, -0.0011738, 0, -0.898794, 0.438371, -0.000626244, -5.41802, -6.12478, -12.5577, 1.01794)",
+        "linesPlay": "running",
+        "linesDuration": "16s",
+        "heroTop": -34.125
+      },
+      {
+        "scrollY": 480,
+        "hidden": false,
+        "fieldClass": "field",
+        "shift": "-24px",
+        "opacity": "0.4973333333333333",
+        "halo": "matrix(1.00437, 0, 0, 1.00437, 2.24202, -20.5583)",
+        "haloPlay": "running",
+        "haloDuration": "9s",
+        "lines": "matrix3d(0.914416, -0.177442, -0.36381, 0.000519729, 0.404776, 0.400854, 0.821872, -0.0011741, 0, -0.898794, 0.438371, -0.000626244, -8.25182, -9.22617, -18.9164, 1.02702)",
+        "linesPlay": "running",
+        "linesDuration": "16s",
+        "heroTop": -194.125
+      },
+      {
+        "scrollY": 640,
+        "hidden": false,
+        "fieldClass": "field",
+        "shift": "-32px",
+        "opacity": "0.45644444444444443",
+        "halo": "matrix(1.00556, 0, 0, 1.00556, 2.85078, -27.6238)",
+        "haloPlay": "running",
+        "haloDuration": "9s",
+        "lines": "matrix3d(0.914652, -0.177209, -0.363331, 0.000519045, 0.404243, 0.400957, 0.822083, -0.0011744, 0, -0.898794, 0.438371, -0.000626244, -11.0765, -12.3288, -25.2777, 1.03611)",
+        "linesPlay": "running",
+        "linesDuration": "16s",
+        "heroTop": -354.125
+      }
+    ]
+  },
+  "mobileMotion": {
+    "start": {
+      "scrollY": 0,
+      "hidden": false,
+      "fieldClass": "field ",
+      "shift": "0px",
+      "opacity": "0.62",
+      "halo": "matrix(1.00459, 0, 0, 1.00459, 0.589014, 1.11603)",
+      "haloPlay": "running",
+      "haloDuration": "9s",
+      "lines": "matrix(1, 0, 0, 1, -0.574088, 0.45927)",
+      "linesPlay": "running",
+      "linesDuration": "18s",
+      "heroTop": 305.53125
+    },
+    "idleAfter1100ms": {
+      "scrollY": 0,
+      "hidden": false,
+      "fieldClass": "field ",
+      "shift": "0px",
+      "opacity": "0.62",
+      "halo": "matrix(1.01437, 0, 0, 1.01437, 1.84295, 3.4919)",
+      "haloPlay": "running",
+      "haloDuration": "9s",
+      "lines": "matrix(1, 0, 0, 1, -1.79624, 1.43699)",
+      "linesPlay": "running",
+      "linesDuration": "18s",
+      "heroTop": 305.53125
+    },
+    "scroll250": {
+      "scrollY": 250,
+      "hidden": false,
+      "fieldClass": "field ",
+      "shift": "-14px",
+      "opacity": "0.5462820512820512",
+      "halo": "matrix(1.01541, 0, 0, 1.01541, 1.97603, -10.2559)",
+      "haloPlay": "running",
+      "haloDuration": "9s",
+      "lines": "matrix(1, 0, 0, 1, -1.92595, -12.4592)",
+      "linesPlay": "running",
+      "linesDuration": "18s",
+      "heroTop": 55.53125
+    },
+    "reduced": {
+      "scrollY": 250,
+      "hidden": false,
+      "fieldClass": "field ",
+      "shift": "-14px",
+      "opacity": "0.5462820512820512",
+      "halo": "none",
+      "haloPlay": "running",
+      "haloDuration": "0s",
+      "lines": "none",
+      "linesPlay": "running",
+      "linesDuration": "0s",
+      "heroTop": 55.53125
+    },
+    "reducedAfter500ms": {
+      "scrollY": 250,
+      "hidden": false,
+      "fieldClass": "field ",
+      "shift": "-14px",
+      "opacity": "0.5462820512820512",
+      "halo": "none",
+      "haloPlay": "running",
+      "haloDuration": "0s",
+      "lines": "none",
+      "linesPlay": "running",
+      "linesDuration": "0s",
+      "heroTop": 55.53125
+    }
+  }
+}
