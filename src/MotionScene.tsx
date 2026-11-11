@@ -93,17 +93,20 @@ export default function MotionScene({ paused }: { paused: boolean }) {
       pointerX += (pointerTargetX - pointerX) * ease(elapsed, 190);
       pointerY += (pointerTargetY - pointerY) * ease(elapsed, 190);
       const progress = clamp(scrollCurrent / pageLength, 0, 1);
+      // Give the first viewport its own travel; page progress alone moves only a
+      // few pixels before PeladaPro on a long page.
+      const openingDepth = clamp(scrollCurrent / (innerHeight * 1.4), 0, 1);
       const ambient = Math.sin(time / 3200) * 7;
       const sweep = Math.sin(progress * Math.PI);
       const reading = clamp((progress - .18) / .4, 0, 1);
       const closing = clamp((progress - .76) / .24, 0, 1);
 
-      wash.style.transform = `translate3d(${Math.round(-90 + progress * 215 + pointerX * 22)}px,${Math.round(-90 + progress * 100 + pointerY * 16 + ambient)}px,0) scale(${(1 + progress * .13).toFixed(3)})`;
+      wash.style.transform = `translate3d(${(-90 + openingDepth * 40 + progress * 90 + pointerX * 22).toFixed(2)}px,${(-90 + openingDepth * 20 + progress * 60 + pointerY * 16 + ambient).toFixed(2)}px,0) scale(${(1 + progress * .13).toFixed(3)})`;
       wash.style.opacity = String((.8 - reading * .35 + closing * .2).toFixed(3));
-      mesh.style.transform = `translate3d(${Math.round(-80 + progress * 185 + pointerX * 11)}px,${Math.round(30 - progress * 190 + ambient * .45)}px,0) rotate(${(-8 + progress * 17).toFixed(2)}deg) scale(${(1 + progress * .17).toFixed(3)})`;
+      mesh.style.transform = `translate3d(${(-80 + openingDepth * 160 + progress * 75 + pointerX * 11).toFixed(2)}px,${(30 - openingDepth * 130 - progress * 65 + ambient * .45).toFixed(2)}px,0) rotate(${(-8 + progress * 17).toFixed(2)}deg) scale(${(1 + progress * .17).toFixed(3)})`;
       mesh.style.opacity = String((.7 - reading * .35 + closing * .14).toFixed(3));
       if (innerWidth > 640) {
-        ray.style.transform = `translate3d(${Math.round(110 - progress * 250 - pointerX * 14)}px,${Math.round(-40 + progress * 220 - pointerY * 10 - ambient * .5)}px,0) rotate(${(28 - progress * 25).toFixed(2)}deg) scale(${(1 + sweep * .12).toFixed(3)})`;
+        ray.style.transform = `translate3d(${(110 - openingDepth * 100 - progress * 125 - pointerX * 14).toFixed(2)}px,${(-40 + openingDepth * 90 + progress * 125 - pointerY * 10 - ambient * .5).toFixed(2)}px,0) rotate(${(28 - progress * 25).toFixed(2)}deg) scale(${(1 + sweep * .12).toFixed(3)})`;
         ray.style.opacity = String((.48 - reading * .28 + closing * .24).toFixed(3));
       }
       field.style.setProperty('--motion-progress', progress.toFixed(4));

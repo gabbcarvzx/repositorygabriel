@@ -108,6 +108,8 @@ with sync_playwright() as playwright:
     page.wait_for_timeout(500)
     page.screenshot(path=str(out / 'motion-top.png'))
     at_top = mesh.evaluate('el => getComputedStyle(el).transform')
+    top_mesh_x = mesh.evaluate('el => new DOMMatrix(getComputedStyle(el).transform).m41')
+    top_wash_x = page.locator('.field__wash').evaluate('el => new DOMMatrix(getComputedStyle(el).transform).m41')
     page.mouse.move(750, 460)
     page.wait_for_timeout(400)
     with_pointer = page.locator('.field__wash').evaluate('el => getComputedStyle(el).transform')
@@ -126,11 +128,17 @@ with sync_playwright() as playwright:
     page.wait_for_timeout(500)
     magnetic_return = page.locator('.round-action .magnet-core').evaluate('el => {const m=new DOMMatrix(getComputedStyle(el).transform); return Math.hypot(m.m41,m.m42)}')
     record('magnet moves and returns', magnetic_offset > 1 and magnetic_return < 1.5, f'{magnetic_offset:.2f}px -> {magnetic_return:.2f}px')
+    icon_transition = page.locator('.round-action__icon').evaluate('el => getComputedStyle(el).transitionProperty')
+    record('magnet transform has one controller', 'transform' not in icon_transition and 'all' not in icon_transition, icon_transition)
     for position in (240, 520, 900):
         page.evaluate('(y) => window.scrollTo({top:y,behavior:"instant"})', position)
         page.wait_for_timeout(280)
     after_slow = mesh.evaluate('el => getComputedStyle(el).transform')
     record('slow scroll changes field', at_top != after_slow)
+    mesh_travel = mesh.evaluate('el => new DOMMatrix(getComputedStyle(el).transform).m41') - top_mesh_x
+    wash_travel = page.locator('.field__wash').evaluate('el => new DOMMatrix(getComputedStyle(el).transform).m41') - top_wash_x
+    record('first viewport has distinct layer speeds', mesh_travel > 100 and mesh_travel - wash_travel > 70,
+           f'mesh {mesh_travel:.1f}px; wash {wash_travel:.1f}px at 900px scroll')
     featured_visual = page.locator('.featured-section .visual-link')
     visual_box = featured_visual.bounding_box()
     page.mouse.move(visual_box['x'] + visual_box['width'] * .68, visual_box['y'] + 70)
