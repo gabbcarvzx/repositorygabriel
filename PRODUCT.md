@@ -6,7 +6,7 @@
 web
 
 ## Stack
-Delegado pelo briefing: React, TypeScript e Tailwind CSS com Vite. Rotas por prefixo de idioma (`/pt`, `/en`) sem backend.
+React, TypeScript e Tailwind CSS com Vite. Rotas equivalentes por idioma (`/pt`, `/en` e páginas de projeto) sem backend.
 
 ## Users
 Recrutadores e potenciais clientes que querem conhecer trabalhos, entender a participação de Gabriel e entrar em contato.
@@ -17,9 +17,10 @@ Apresentar projetos reais, formação e processo de trabalho com clareza, em por
 ## Confirmed facts
 - Gabriel Carvalho estuda Sistemas de Informação na UNINASSAU.
 - Tem experiência prática em projetos web, inglês C2 e vivência acadêmica em Vancouver.
-- Usa Codex e vibecoding no desenvolvimento; a participação específica em cada projeto ainda precisa de confirmação.
+- Usa Codex e vibecoding no desenvolvimento. Sua participação confirmada nos quatro projetos está discriminada em `docs/project-content.md`; atribuições de arquitetura técnica do código permanecem sem confirmação.
 - Projetos fornecidos: PeladaPro, Expansão Giraffas (site para Gessé Lira, consultor comercial), Exclusiva Modas e FE Prime (nome público do projeto no repositório `juniormodelo`).
 - URLs de publicação, repositórios, GitHub pessoal e LinkedIn foram fornecidas pelo proprietário. Os quatro sites publicados responderam HTTP 200 e tiveram a abertura capturada nesta sessão. O conteúdo dos repositórios ainda não foi auditado.
+- Gabriel autorizou o endereço de contato público pelo WhatsApp: `https://wa.me/5581992796870`.
 
 ## Constraints
 Sem PGM Academy, métricas ou depoimentos inventados. Não apresentar relação contratual direta com a rede Giraffas. Mostrar download de currículo apenas após inclusão do arquivo. Não criar formulário sem destino.

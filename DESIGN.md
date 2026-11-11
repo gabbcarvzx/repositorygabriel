@@ -1,19 +1,35 @@
-# Direção visual — Gabriel Carvalho
+# Direção visual e motion — Gabriel Carvalho
 
 ## Conceito
-Uma superfície de campo: linhas de perspectiva muito finas e uma luz verde ácida lenta dão profundidade à abertura. O resto da página trata os trabalhos como peças editoriais, com respiro, escala variável e informação objetiva. Modo da superfície: Experience.
 
-## Tokens
-- Grafite `#101310`; superfície `#171b16`; branco suave `#eff2e9`; texto secundário `#abb5a5`; verde ácido `#b9f248`; linha `#3b4536`.
-- Tipografia: Anton no display e IBM Plex Sans no texto, ambas distribuídas localmente pelo build com licença aberta. Fallbacks de sistema apenas quando a fonte não carregar.
-- Layout: largura máxima 1440 px, margens fluidas de 20–72 px, ritmo vertical de 72–160 px.
-- Motion: resposta de controles 160 ms e transição da mídia 550 ms; easing `cubic-bezier(.22,1,.36,1)`. Não há entradas automáticas de conteúdo. O fundo responde ao scroll com até 90 px de deslocamento, usando transform e opacity sem estado React por pixel.
-- O campo usa animações ambiente de 9 s (luz) e 16 s (linhas); em telas pequenas, linhas 2D em 18 s. Pausa manual, aba oculta, área fora da janela e preferência por movimento reduzido interrompem o movimento contínuo.
+Um campo de linhas curvas de luz atravessa a página. A luz e os contornos mudam de posição e escala conforme o visitante passa da assinatura tipográfica ao PeladaPro, aos demais projetos e ao contato. O conteúdo permanece imóvel em relação à rolagem nativa; a profundidade existe nas camadas decorativas e nas capturas recortadas. O verde ácido marca direção e ações, sem virar uma camada sobre o texto.
 
-## Composição
-Abertura tipográfica assimétrica; PeladaPro ocupa o maior espaço visual. Os outros trabalhos alternam imagem e texto, sem grade de cartões idênticos. Linha editorial fina organiza metadados. Contato fecha com escala grande e links diretos.
+## Sistema visual
 
-As imagens de projetos são capturas reais das páginas iniciais públicas, feitas em 10/11/2026. Há capturas desktop (1440 × 900 px) e mobile (390 × 620 px). JPEGs otimizados mantêm dimensões reservadas; o mobile usa sua própria captura para preservar o enquadramento legível. Links textuais ficam junto a cada projeto, deixando as capturas livres de controles sobrepostos.
+- Grafite `#101310`, superfície `#171b16`, branco suave `#eff2e9`, texto secundário `#abb5a5`, verde `#b9f248`, linha `#3b4536`.
+- Anton no display e IBM Plex Sans no texto, servidas localmente. Hierarquia e composição editorial existentes permanecem.
+- Conteúdo com largura máxima de 1440 px, margens fluidas e seções com respiro. Capturas reais dos projetos, sem iframes nem conteúdo inventado.
+- WhatsApp é uma ação explícita na navegação mobile, no contato e nas páginas de projeto; nunca um botão flutuante.
 
-## Acessibilidade e desempenho
-Rolagem nativa. Camada decorativa inacessível e sem eventos de ponteiro. `prefers-reduced-motion` remove movimento; controle persistente pausa animação ambiente. Aba oculta pausa via Page Visibility API. Em telas pequenas, o campo é simplificado. Dimensões de mídia reservadas.
+## Tese do movimento
+
+- **Momento focal:** a abertura move contornos curvos e uma superfície de luz em profundidades diferentes. Durante o scroll, as linhas passam pela imagem do PeladaPro e continuam mais quietas nas áreas de leitura.
+- **Continuidade:** o fundo fixo usa a altura da janela para o deslocamento mais expressivo entre abertura e PeladaPro e o progresso da página para continuar mudando nas seções seguintes. As camadas têm velocidades e direções diferentes. A interpolação não move o texto. As imagens recebem parallax pequeno dentro de recortes com margem de escala.
+- **Feedback:** ponteiro preciso desloca suavemente a luz da abertura e o centro de duas ações. A área clicável não se move. Imagens podem inclinar discretamente dentro do recorte. Saída do ponteiro retorna ao repouso.
+- **Ritmo:** uma entrada curta da abertura; PeladaPro ganha presença pela transição de escala entre título e captura; os outros projetos entram uma vez, com amplitudes alternadas e contidas. Contato fecha com a luz mais concentrada.
+
+## Tokens e implementação
+
+- Resposta de controle: 140–200 ms. Entrada da abertura: até 650 ms. Entrada de projeto: 420–520 ms. Retorno do ponteiro: aproximadamente 300 ms.
+- Curva de chegada: `cubic-bezier(.16,1,.3,1)`; feedback imediato: `cubic-bezier(.22,1,.36,1)`. Sem bounce ou overshoot de texto.
+- Profundidade do fundo: nos primeiros 900 px de rolagem desktop, as linhas avançam mais de 100 px na horizontal e a luz avança menos de 50 px, criando deslocamento relativo visível. A composição continua evoluindo pelo progresso total da página; escala limitada a 1.18. Imagem até 3% de deslocamento vertical e 1° de inclinação. No celular, a terceira camada fica oculta.
+- Um controlador `requestAnimationFrame` calcula scroll, ponteiro e tempo ambiente fora do render React. Alvos de scroll e ponteiro são interpolados com suavização exponencial independente da taxa de quadros; não há biblioteca de animação, WebGL nem scroll hijacking.
+- O controlador JavaScript é o único responsável pelo `transform` do centro magnético; CSS controla apenas cor e superfície. Coordenadas decorativas mantêm precisão subpixel, evitando degraus de 1 px.
+- Medidas geométricas são tomadas na montagem e no resize. Durante os frames, escrever apenas transforms/opacity em elementos decorativos. Listeners, observers e frames são limpos ao desmontar.
+
+## Acessibilidade e limites
+
+- A camada decorativa usa `aria-hidden` e `pointer-events:none`. Texto, links e foco não se deslocam.
+- O controle de pausa persiste e interrompe loop ambiente, parallax de scroll, resposta do ponteiro e movimentos decorativos de imagens; também existe nas páginas de projeto.
+- Aba oculta suspende o frame. `prefers-reduced-motion` fixa a composição, remove parallax/magnetismo e mantém os controles utilizáveis. Dispositivos sem ponteiro preciso não recebem interações de mouse.
+- Conteúdo está visível antes de qualquer JavaScript de entrada. A rolagem continua nativa. Screenshots não comprovam fluidez; observar scroll lento, rápido, reverso, pausa e retorno do ponteiro em navegador real.
