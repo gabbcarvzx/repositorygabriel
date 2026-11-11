@@ -45,7 +45,7 @@ export default function App() {
     const ogDesc = document.querySelector('meta[property="og:description"]') ?? document.head.appendChild(document.createElement('meta'));
     ogDesc.setAttribute('property', 'og:description'); ogDesc.setAttribute('content', caseProject?.details ?? t.metaDescription);
     const version = document.querySelector('meta[name="portfolio-version"]') ?? document.head.appendChild(document.createElement('meta'));
-    version.setAttribute('name', 'portfolio-version'); version.setAttribute('content', import.meta.env.VITE_BUILD_SHA || 'local');
+    version.setAttribute('name', 'portfolio-version'); version.setAttribute('content', import.meta.env.VITE_BUILD_SHA || import.meta.env.VITE_VERCEL_GIT_COMMIT_SHA || 'local');
   }, [lang, t, caseProject]);
 
   const changeLanguage = (next: Language) => {
