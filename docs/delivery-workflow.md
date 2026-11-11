@@ -1,8 +1,8 @@
 # Fluxo de entrega
 
-## Estado em 10/11/2026
+## Estado em 11/11/2026
 
-Este workspace começou sem Git, remoto, workflows ou vínculo local com Vercel. Um repositório Git **local** foi inicializado, com baseline `06d07fefc547870858e0511ce7902c21d7c4a888` e branch `feat/project-stories-delivery`. Nenhum push, PR, preview ou deploy foi feito. `gh` e `vercel` não estavam instalados; não foi confirmada autenticação ou plano das contas. Nenhum token foi lido ou registrado. Gabriel indicou `https://github.com/gabbcarvzx/repositorygabriel.git` como destino futuro na etapa de motion; o remoto ainda não foi configurado e essa indicação não autoriza push, merge ou deploy.
+O remoto `origin` é `https://github.com/gabbcarvzx/repositorygabriel.git` (repositório público). `main` é a branch padrão e permanece no baseline `06d07fefc547870858e0511ce7902c21d7c4a888`. A entrega está na branch `fix/motion-parallax`, com [PR #1 em rascunho](https://github.com/gabbcarvzx/repositorygabriel/pull/1) para revisão. O primeiro push para o repositório vazio tornou temporariamente essa branch a padrão; `main` foi criada no baseline e restaurada como padrão antes do PR. Nenhum merge ou deploy foi feito. O CI do PR executa tipos, lint, build e capturas; `verify.yml` foi fixado em `ubuntu-24.04` porque o Playwright 1.58.0 não instala Chromium no runner Ubuntu 26.04. Não foi confirmado vínculo com Vercel ou autenticação da conta Vercel. Nenhum token foi registrado no repositório.
 
 ## Caminho preparado
 
@@ -18,7 +18,7 @@ Este workspace começou sem Git, remoto, workflows ou vínculo local com Vercel.
 
 ## Ativação que depende de Gabriel
 
-- Confirmar visibilidade e autorizar o **push da branch** para o repositório indicado por Gabriel. A URL foi fornecida, mas nenhuma publicação externa foi autorizada na etapa de motion.
+- A branch de revisão já foi enviada ao repositório público com autorização posterior de Gabriel. Avaliar o PR e aprovar explicitamente o SHA exato antes de qualquer merge. Novos commits invalidam aprovações anteriores.
 - Indicar ou criar, com autorização separada, o **projeto Vercel de destino** e vinculá-lo ao mesmo repositório para previews. Confirmar a branch de produção `main` e que `git.deploymentEnabled.main=false` será aplicado. O preview será publicamente acessível conforme as configurações da conta.
 - Configurar no GitHub o ambiente `production` com **required reviewer** de Gabriel, restringir a `main` e impedir bypass quando disponível. Se o próprio Gabriel iniciar o workflow e a opção de impedir self-review estiver ativa, será necessária outra pessoa revisora; ajustar o desenho ao controle desejado. Verificar disponibilidade no plano: em GitHub Free/Pro/Team, required reviewers para environments estão disponíveis somente em repositórios públicos. Se o destino privado/plano não suportar o gate, não ativar `PRODUCTION_GATE_READY`; alternativa: fazer deploy manual por Gabriel após aprovação explícita do SHA e checks, sem afirmar que há gate automático.
 - Configurar `VERCEL_TOKEN`, `VERCEL_ORG_ID` e `VERCEL_PROJECT_ID` como secrets **somente** do ambiente protegido `production`. Não colocar em variáveis do job de checks. Testar a integração com um release autorizado antes de chamar o fluxo operacional.
